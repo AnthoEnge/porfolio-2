@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio Engels Anthony</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- FONTS 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#propos">A propos</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="accueil" id="accueil">
+
+            <div class="title">
+                <h1><span class="orange">Hey</span>, moi c'est <span class="orange">Engels Anthony</span> <br>
+                    < Développeur <span id="changeMot" class="orange">Web</span> />
+                </h1>
+            </div>
+            <div class="center"><div class="moi"></div></div>
+            <!-- <div class="imageTitle">
+                <div class="image">
+                    <img src="img/Fichier 1.png" alt="Mon image en dessin" class="moi">
+                    <span class="moiBottom"></span>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="propos" id="propos">
+            <div class="titleDiv">
+                <h2>A Propos</h2>
+            </div>
+            <div class="gauche column">
+                <div class="contentDiv">
+                    <p>Ancien pâtissier de 23 ans, j'ai décider de me reconvertir dans un domaine qui me passionne
+                        vraiment,
+                        l'informatique, et plus particulèrement le développement web. <br>
+                        J'ai découvert le développement web depuis peu, je me suis donc lancez-le défi de me former
+                        en
+                        "autodidacte" en attendant le temps de trouver une formation diplômante. Motivé, et l'envie
+                        d'apprendre
+                        toutes les techniques et langage utiles qui me permettra de m'améliorer et de développer mes
+                        compétences. Plus particulèrement intérrésser pars le développement front end pour débuter dans
+                        le
+                        domaine, et ensuite je développerai mes compétences en Back-End.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="portfolio" id="portfolio">
+            <div class="titleDiv">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="gauche">
+                <img src="img/TodoList.PNG" alt="">
+                <div class="portfolioContent">
+                    <h3 class="orange">Todo List</h3>
+                    <p>Le site permet de créer une liste de tâches, et de les filtrer en fonction des tâches à réaliser
+                        et
+                        celle déjà compléter. <br>
+                        Les langage informatique HTML, CSS et Javascript on était utilisé dans le projet.</p>
+                </div>
+            </div>
+            <div class="droite">
+                <div class="portfolioContent">
+                    <h3 class="orange">Voyage</h3>
+                    <div class="droiteFloat">
+                        <p>Le site est une page qui sert à présenter une agence de voyage.<br>
+                            Les langage informatique HTML, CSS on était utilisé dans le projet.</p>
+                    </div>
+                </div>
+                <img src="img/Voyage.png" alt="">
+            </div>
+
+            <div class="gauche">
+                <img src="img/TopActrice.PNG" alt="">
+                <div class="portfolioContent">
+                    <h3 class="orange">Top Actrice</h3>
+                    <p>Le site référence les Top actrice et leur "meilleurs" films sur une page.<br>
+                        Les langage informatique HTML, CSS et Javascript on était utilisé dans le projet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="titleDiv">
+                <h2>Contact</h2>
+            </div>
+            <div class="contactContent">
+                <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+                    <table class="form-style">
+                        <tr>
+                            <td>
+                                <label>
+                                    Votre nom <span class="required">*</span>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" class="long" />
+                                <span id="errorname"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Votre adresse e-mail <span class="required">*</span>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" class="long" />
+                                <spanid="erroremail"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Message <span class="required">*</span>
+                                </label>
+                            </td>
+                            <td>
+                                <textarea name="message" class="long field-textarea"></textarea>
+                                <span id="errormsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Envoyer" class="form-style">
+                                <input type="reset" value="Réinitialiser" class="form-style">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <div class="logoContent">
+                <a href="https://github.com/AnthoEnge" target="_blank"><span>GITHUB</span><i class="bi bi-git"></i></a>
+            </div>
+            <div class="logoContent">
+                <a href="mailto:anthony.engels@outlook.fr?subject = Feedback&body = Message"
+                    target="_blank"><span>MAIL</span><i class="bi bi-envelope"></i></a>
+            </div>
+            <div class="logoContent">
+                <a href="http://twitter.com" target="_blank"><span>TWITTER</span><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
