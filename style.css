@@ -221,6 +221,9 @@ nav ul li:hover a {
     border-top: 2px solid rgb(49, 94, 69);
     position: relative;
     background: #171717;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .portfolioContent {
     height: auto;
@@ -240,7 +243,7 @@ nav ul li:hover a {
 .gauche {
     display: flex;
     /* width: 60vw; */
-    margin: 50px auto;
+    margin: 50px 0;
     background: rgb(49, 94, 69);
     border-radius: 10px;
     position: relative;
@@ -251,7 +254,6 @@ nav ul li:hover a {
 }
 .droite {
     display: flex;
-    margin: 0 auto;
     margin-bottom: 50px;
     /* width: 60vw; */
     background: rgb(49, 94, 69);
