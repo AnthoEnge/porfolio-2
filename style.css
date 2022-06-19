@@ -89,6 +89,7 @@ nav {
     display: block;
     width: 100%;
     border-bottom: 2px solid rgb(49, 94, 69);
+    padding: 20px;
 }
 nav ul {
     display: flex;
@@ -231,25 +232,27 @@ nav ul li:hover a {
 }
 .portfolio img {
     height: 100%;
-    max-width: 300px;
+    max-width: 50%;
     min-height: 300px;
+    max-height: 400px;
     object-fit: cover;
 }
 .gauche {
     display: flex;
-    width: 60vw;
+    /* width: 60vw; */
     margin: 50px 0;
     background: rgb(49, 94, 69);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     align-items: center;
+    width: auto;
     /* flex-wrap: wrap; */
 }
 .droite {
     display: flex;
     margin-bottom: 50px;
-    width: 60vw;
+    /* width: 60vw; */
     background: rgb(49, 94, 69);
     /* float: right; */
     border-radius: 10px;
@@ -311,7 +314,6 @@ form {
 .form-style {
     margin:10px auto;
     max-width: 500px;
-    min-width: 200px;
     padding: 20px 0;
     font-family: "Roboto", "Lucida Grande", sans-serif;
     font-size: calc(0.7em + 1vw);
@@ -397,8 +399,6 @@ footer {
 }
 .logo i {
     color: #171717;
-
-    margin: 0 20px;
 }
 .logo a {
     display: flex;
@@ -409,7 +409,7 @@ footer {
 .logo a:hover , .logo a:hover i {
     color:#ffffff
 }
-@media screen and (min-device-width: 0px) and (max-device-width: 900px) { 
+@media screen and (min-device-width: 621px) and (max-device-width: 900px) { 
     .content {
         width: 80vw;
     }
@@ -420,15 +420,36 @@ footer {
         height: 75vh;
     }
     .gauche , .droite {
-        flex-wrap: wrap;
         width: 100%
     }
     .gauche img , .droite img{
+        min-width: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 621px) { 
+    .content {
+        width: 80vw;
+    }
+    nav ul {
+        width: 100vw;
+    }
+    .accueil {
+        height: 75vh;
+    }
+    .gauche , .droite {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .gauche h3, .droite h3 {
+        margin: 30px 30px 0px 30px;
+    }
+    .gauche img , .droite img{
         min-width: 100%;
-        max-height: 300px;
         object-fit: cover;
     }
     .droite {
-        flex-flow: column-reverse;
+        flex-direction: column-reverse;
     }
 }
