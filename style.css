@@ -61,8 +61,7 @@ a {
 h1 {
     color: rgb(231, 230, 230);
     font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-    font-size: calc(2em + 2vw);
+    font-size: calc(15px + 2vw);
 }
 h1,h2,h3,h4 {
     font-family: 'Roboto', sans-serif;
@@ -93,14 +92,15 @@ nav {
 }
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 60vw;
+    margin: 0 auto;
 }
 nav ul li {
-    margin: 20px;
     font-size: calc(0.7em + 1vw);
     background: #171717;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px #171717;
     transition: box-shadow 0.3s ease-in-out;
@@ -118,32 +118,40 @@ nav ul li:hover a {
 }
 
 /* ACCUEIL TITLE */
+
 .accueil {
     position: relative;
-    height: 100vh;
+    height: 81vh;
 }
-
 .title {
-    margin-top: 10vh
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
 }
 .imageTitle {
     position: relative;
     height: auto;
-    margin: 30px 0;
 }
 .image {
     display: flex;
     justify-content: flex-end;
 }
+.center {
+    display: flex;
+    justify-content: center;
+}
 
 .moi {
-    position: relative;
-    height: 300px;
-    width: 300px;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    max-width: 200px;
     border-radius: 50%;
     background: rgb(49, 94, 69);
     margin: 100px auto;
     animation: box-shadow 3s ease-in-out infinite,position 6s ease-in-out infinite;
+    bottom: 0%;
+    left: auto;
 }
 @keyframes box-shadow {
     0% {
@@ -161,10 +169,10 @@ nav ul li:hover a {
         transform: translateY(0%);
     }
     40% {
-        transform: translateY(123%);
+        transform: translateY(100px);
     }
     60% {
-        transform: translateY(123%);
+        transform: translateY(100px);
     }
     100% {
         transform: translateY(0%);
@@ -188,14 +196,12 @@ nav ul li:hover a {
 
 .propos {
     border-top: 2px solid rgb(49, 94, 69);
-    padding: 30px;
     position: relative;
 }
 .contentDiv p {
     color: #171717;
     font-size: calc(0.7em + 0.5vw);
-    width: 100%;
-    margin: auto;
+    padding: 30px;
     text-align: justify;
 }
 .contentDiv {
@@ -204,83 +210,80 @@ nav ul li:hover a {
     align-items: center !important;
     width: 100%;
 }
-.column {
+/* .column {
     width: 300px !important;
     margin: auto !important;
     margin-bottom: 30px !important;
-}
+} */
 
 /* PORTFOLIO */
 .portfolio {
     border-top: 2px solid rgb(49, 94, 69);
     position: relative;
     background: #171717;
-    flex-wrap: wrap;
-    padding: 30px 0;
 }
 .portfolioContent {
     height: auto;
     position: relative;
+    flex-wrap: wrap;
 }
 .portfolio h2 {
     text-shadow: 2px 2px 2px #171717;
 }
 .portfolio img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
     max-width: 300px;
-    min-width: 300px;
-    border-radius: 5px;
+    min-height: 300px;
+    object-fit: cover;
 }
 .gauche {
     display: flex;
     width: 60vw;
-    min-width: 800px;
     margin: 50px 0;
-    padding: 20px;
     background: rgb(49, 94, 69);
-    /* flex-wrap: wrap for mobile */
     border-radius: 10px;
-    max-width: 100vw;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    /* flex-wrap: wrap; */
 }
 .droite {
     display: flex;
     margin-bottom: 50px;
     width: 60vw;
-    max-width: 100vw;
-    min-width: 800px;
-    padding: 20px;
     background: rgb(49, 94, 69);
-    float: right;
+    /* float: right; */
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    /* flex-wrap: wrap; */
 }
 .droite .portfolioContent, .droite p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     float: right;
     text-align: end !important;
 }
 .portfolioContent h3 {
     font-size: calc(1em + 1vw);
     color: white;
-    margin: 30px;
+    margin: 0px 30px 
 }
 .portfolioContent p {
     font-size: calc(0.7em + 0.5vw);
     text-align: justify;
     color: #171717;
-    margin-left: 20px;
+    margin: 0 20px;
     width: 80%;
-    padding: 20px 20px ;
+    padding: 20px;
 }
 
 /* CONTACT */
 .contact {
     border-top: 2px solid rgb(49, 94, 69);
-    padding: 30px;
 }
 .contactContent {
     display: flex;
@@ -380,13 +383,15 @@ form {
 footer {
     margin-top: 90px;
     background: rgb(49, 94, 69);
-    padding: 30px;
+
 }
 .logo {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: calc(2em + 2vw);
+    font-size: calc(15px + 2vw);
+    padding: 0 20px 0 10px;
+
 }
 .logo i {
     color: #171717;
@@ -407,4 +412,26 @@ footer {
     justify-content: center;
     align-items: center;
     padding:10px;
+}
+
+
+@media screen and (min-device-width: 0px) and (max-device-width: 900px) { 
+    .content {
+        width: 80vw;
+    }
+    nav ul {
+        width: 100vw;
+    }
+    .gauche , .droite {
+        flex-wrap: wrap;
+        width: 100%
+    }
+    .gauche img , .droite img{
+        min-width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+    .droite {
+        flex-flow: column-reverse;
+    }
 }
