@@ -240,7 +240,7 @@ nav ul li:hover a {
 .gauche {
     display: flex;
     /* width: 60vw; */
-    margin: 50px 0;
+    margin: 50px auto;
     background: rgb(49, 94, 69);
     border-radius: 10px;
     position: relative;
@@ -251,6 +251,7 @@ nav ul li:hover a {
 }
 .droite {
     display: flex;
+    margin: 0 auto;
     margin-bottom: 50px;
     /* width: 60vw; */
     background: rgb(49, 94, 69);
