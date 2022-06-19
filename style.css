@@ -61,7 +61,7 @@ a {
 h1 {
     color: rgb(231, 230, 230);
     font-weight: 600;
-    font-size: calc(15px + 2vw);
+    font-size: calc(15px + 4vw);
 }
 h1,h2,h3,h4 {
     font-family: 'Roboto', sans-serif;
@@ -121,7 +121,7 @@ nav ul li:hover a {
 
 .accueil {
     position: relative;
-    height: 81vh;
+    height: 85vh;
 }
 .title {
     margin: 100px auto;
@@ -151,7 +151,6 @@ nav ul li:hover a {
     margin: 100px auto;
     animation: box-shadow 3s ease-in-out infinite,position 6s ease-in-out infinite;
     bottom: 0%;
-    left: auto;
 }
 @keyframes box-shadow {
     0% {
@@ -166,7 +165,7 @@ nav ul li:hover a {
 }
 @keyframes position {
     0% {
-        transform: translateY(0%);
+        transform: translateY(-50%);
     }
     40% {
         transform: translateY(100px);
@@ -175,7 +174,7 @@ nav ul li:hover a {
         transform: translateY(100px);
     }
     100% {
-        transform: translateY(0%);
+        transform: translateY(-50%);
     }
 
 }
@@ -287,7 +286,7 @@ nav ul li:hover a {
 }
 .contactContent {
     display: flex;
-    margin: 30px;
+
 }
 .left {
     width: 50%;
@@ -313,13 +312,14 @@ form {
     margin:10px auto;
     max-width: 500px;
     min-width: 200px;
-    padding: 20px 12px 10px 20px;
+    padding: 20px 0;
     font-family: "Roboto", "Lucida Grande", sans-serif;
     font-size: calc(0.7em + 1vw);
   }
   .form-style td {
     padding: 0;
-    display: block;
+    display: flex;
+    width: 100%;
     list-style: none;
     margin: 10px 0 0 0;
   }
@@ -339,6 +339,8 @@ form {
     cursor: pointer;
     border: none;
     color: #fff;
+    margin: 0 5px;
+    text-align: center;
   }
   .form-style input[type=submit]:hover, .form-style input[type=reset]:hover{
     background: rgb(33, 63, 46);
@@ -383,44 +385,39 @@ form {
 footer {
     margin-top: 90px;
     background: rgb(49, 94, 69);
-
+    height: 150px;
 }
 .logo {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: calc(15px + 2vw);
-    padding: 0 20px 0 10px;
-
+    height: 100%;
+    width: 100%;
 }
 .logo i {
     color: #171717;
-    transition: color 0.3s;
-}
-.logo i:hover , .logo i:hover span {
-    color: #ffffff;
-}
-.logo span {
-    color: #171717;
-    font-size: calc(10px + 1vw) !important;
-    font-family: "Roboto";
-    display: block;
-    margin: 10px;
+
+    margin: 0 20px;
 }
 .logo a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:10px;
+    color: #171717;
 }
-
-
+.logo a:hover , .logo a:hover i {
+    color:#ffffff
+}
 @media screen and (min-device-width: 0px) and (max-device-width: 900px) { 
     .content {
         width: 80vw;
     }
     nav ul {
         width: 100vw;
+    }
+    .accueil {
+        height: 75vh;
     }
     .gauche , .droite {
         flex-wrap: wrap;
