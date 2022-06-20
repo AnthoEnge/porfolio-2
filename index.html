@@ -17,34 +17,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet">
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#propos">A propos</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- <div class="day">
+        <i class="bi bi-brightness-high-fill"></i>
+    </div> -->
     <div class="content">
         <div class="accueil" id="accueil">
-
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#propos">Propos</a></li>
+                    <li><a href="#competence">Compétence</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
             <div class="title">
                 <h1><span class="orange">Hey</span>, moi c'est <span class="orange">Engels Anthony</span> <br>
                     < Développeur <span id="changeMot" class="orange">Web</span> />
                 </h1>
             </div>
 
-            <div class="center"><div class="moi"></div></div>
+            <div class="center">
+                <div class="moi"></div>
+            </div>
         </div>
 
         <div class="propos" id="propos">
             <div class="titleDiv">
                 <h2>A Propos</h2>
             </div>
-            <div class="gauche column">
+            <div class="gauche column" data-aos="fade-right" data-aos-duration="1500">
                 <div class="contentDiv">
                     <p>Ancien pâtissier de 23 ans, j'ai décider de me reconvertir dans un domaine qui me passionne
                         vraiment,
@@ -62,11 +69,43 @@
 
         </div>
 
+        <div class="competence" id="competence">
+            <div class="titleDiv">
+                <h2>Compétence</h2>
+            </div>
+            <div class="competencebg" data-aos="fade-left" data-aos-duration="1500">
+                <div class="langage">
+                    <h3>Langage</h3>
+                    <ul>
+                        <li>Algorithmique</i></li>
+                        <li>Système d'exploitation numérique</li>
+                        <li>Langage informatique HTML/CSS/SCSS</li>
+                        <li>Langage informatique Javascript</li>
+                        <li>WordPress</li>
+                    </ul>
+                    <i class="bi bi-filetype-html"></i>
+                    <i class="bi bi-filetype-css"></i>
+                    <i class="bi bi-filetype-scss"></i>
+                    <i class="bi bi-filetype-js"></i>
+                </div>
+                <div class="softSkills">
+                    <h3>Softskills</h3>
+                    <ul>
+                        <li>Autonome</li>
+                        <li>Curieux</li>
+                        <li>Persévérant</li>
+                        <li>Capacité à actualiser mes connaissances</li>
+                        <li>Esprit d'équipe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="portfolio" id="portfolio">
             <div class="titleDiv">
                 <h2>Portfolio</h2>
             </div>
-            <div class="gauche">
+            <div class="gauche" data-aos="fade-right" data-aos-duration="1500">
                 <img src="img/TodoList.PNG" alt="">
                 <div class="portfolioContent">
                     <h3 class="orange">Todo List</h3>
@@ -76,7 +115,7 @@
                         Les langage informatique HTML, CSS et Javascript on était utilisé dans le projet.</p>
                 </div>
             </div>
-            <div class="droite">
+            <div class="droite" data-aos="fade-left" data-aos-duration="1500">
                 <div class="portfolioContent">
                     <h3 class="orange">Voyage</h3>
                     <div class="droiteFloat">
@@ -87,7 +126,7 @@
                 <img src="img/Voyage.png" alt="">
             </div>
 
-            <div class="gauche">
+            <div class="gauche" data-aos="fade-right" data-aos-duration="1500">
                 <img src="img/TopActrice2.PNG" alt="">
                 <div class="portfolioContent">
                     <h3 class="orange">Top Actrice</h3>
@@ -156,8 +195,8 @@
                 <a href="https://github.com/AnthoEnge" target="_blank">GITHUB<i class="bi bi-git"></i></a>
             </div>
             <div class="logoContent">
-                <a href="mailto:anthony.engels@outlook.fr?subject = Feedback&body = Message"
-                    target="_blank">MAIL<i class="bi bi-envelope"></i></a>
+                <a href="mailto:anthony.engels@outlook.fr?subject = Feedback&body = Message" target="_blank">MAIL<i
+                        class="bi bi-envelope"></i></a>
             </div>
             <div class="logoContent">
                 <a href="http://twitter.com" target="_blank">TWITTER<i class="bi bi-twitter"></i></a>
@@ -167,6 +206,10 @@
 
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

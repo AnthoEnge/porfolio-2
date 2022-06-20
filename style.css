@@ -46,7 +46,7 @@ body {
 }
 .content {
     width: 60vw;
-    margin: 20px auto;
+    margin: 0 auto;
     position: relative;
 }
 /* TYPO */
@@ -58,11 +58,7 @@ a {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
-h1 {
-    color: rgb(231, 230, 230);
-    font-weight: 600;
-    font-size: calc(15px + 4vw);
-}
+
 h1,h2,h3,h4 {
     font-family: 'Roboto', sans-serif;
 }
@@ -83,55 +79,106 @@ h1,h2,h3,h4 {
     font-size: calc(0.7em + 1vw);
     text-align: justify;
 }
-
+/* DAY */
+.day {
+    color:#fff;
+    font-size: calc(1em + 1vw);
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+.bgDay {
+    background: rgb(61, 61, 61) !important;
+}
 /* NAV */
 nav {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
     width: 100%;
-    border-bottom: 2px solid rgb(49, 94, 69);
-    padding: 20px;
 }
 nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 60vw;
-    margin: 0 auto;
+    width: 100%;
 }
 nav ul li {
-    font-size: calc(0.7em + 1vw);
-    background: #171717;
-    padding: 10px 10px;
+    font-size: calc(5px + 1vw);
+    background: rgb(49, 94, 69);
+    padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px #171717;
+    box-shadow: 0 0 10px rgb(49, 94, 69);
     transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
+    animation: float infinite 2s ease-in-out;
 }
 nav ul li:hover {
-    box-shadow: 0 0 30px #171717;
+    box-shadow: 0 0 30px rgb(49, 94, 69);
+    animation: none;
+    animation: rotate3d infinite 3s ease-in-out;
 }
 nav ul li a {
-    color: rgb(49, 94, 69);
+    color: #171717;
     transition: color 0.3s;
 }
 nav ul li:hover a {
     color: rgb(231, 230, 230);
+}
+@keyframes rotate3d {
+    0% {
+        transform: rotate3d(0,0,0,0deg);
+    }
+    30% {
+        transform: rotate3d(0,0,1,-15deg);
+    }
+    70% {
+        transform: rotate3d(0,0,1,15deg);
+    }
+    100% {
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 /* ACCUEIL TITLE */
 
 .accueil {
     position: relative;
-    height: 85vh;
+    height: 99vh;
 }
 .title {
     margin: 100px auto;
     text-align: center;
     position: relative;
 }
+h1 {
+    color: rgb(231, 230, 230);
+    font-weight: 600;
+    font-size: calc(15px + 3.5vw);
+}
+h3 {
+    font-size: calc(1em + 1vw);
+    color: white;
+    text-shadow: 2px 2px 2px #171717;
+    margin: 0px 30px 
+}
 .imageTitle {
     position: relative;
-    height: auto;
 }
 .image {
     display: flex;
@@ -166,7 +213,7 @@ nav ul li:hover a {
 }
 @keyframes position {
     0% {
-        transform: translateY(-50%);
+        transform: translateY(-30%);
     }
     40% {
         transform: translateY(100px);
@@ -175,20 +222,32 @@ nav ul li:hover a {
         transform: translateY(100px);
     }
     100% {
-        transform: translateY(-50%);
+        transform: translateY(-30%);
     }
-
 }
 .moi:after {
     box-shadow: inset 0px 0px 10px rgb(49, 94, 69);
     content: '';
     position: absolute;
-    top: 10%;
-    left: 40%;
+    top: 30%;
+    left: 25%;
     width: 50%;
     height: 50%;
     background: #171717;
     border-radius: 50%;
+    animation: positionIn 5s ease-in-out infinite;
+}
+@keyframes positionIn {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
 }
 
 
@@ -197,6 +256,7 @@ nav ul li:hover a {
 .propos {
     border-top: 2px solid rgb(49, 94, 69);
     position: relative;
+    padding: 50px 0;
 }
 .contentDiv p {
     color: #171717;
@@ -210,17 +270,53 @@ nav ul li:hover a {
     align-items: center !important;
     width: 100%;
 }
-/* .column {
-    width: 300px !important;
-    margin: auto !important;
-    margin-bottom: 30px !important;
-} */
+
+/* COMPETENCE */
+
+.competence {
+    padding: 50px 0;
+    border-top: 2px solid rgb(49, 94, 69);
+
+}
+.competencebg {
+    background: rgb(49, 94, 69);
+    color: #171717;
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.competencebg ul {
+    padding: 20px;
+    font-size: calc(0.7em + 0.5vw);
+}
+
+.competencebg img {
+    max-width: 100px;
+    margin: 0 auto;
+}
+.langage {
+    padding: 20px;
+    text-align: end;
+    border-right: #171717 1px dotted;
+    justify-content: flex-end;
+}
+.langage i {
+    font-size: calc(0.7em + 1vw);
+    padding: 10px;
+}
+.softSkills {
+    padding: 20px;
+}
 
 /* PORTFOLIO */
 .portfolio {
+    padding: 50px 0;
     border-top: 2px solid rgb(49, 94, 69);
     position: relative;
-    background: #171717;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -231,7 +327,7 @@ nav ul li:hover a {
     flex-wrap: wrap;
 }
 .portfolio h2 {
-    text-shadow: 2px 2px 2px #171717;
+    text-shadow: 2px 2px 2px rgb(49, 94, 69);
 }
 .portfolio img {
     height: 100%;
@@ -242,7 +338,6 @@ nav ul li:hover a {
 }
 .gauche {
     display: flex;
-    /* width: 60vw; */
     margin: 50px 0;
     background: rgb(49, 94, 69);
     border-radius: 10px;
@@ -250,19 +345,14 @@ nav ul li:hover a {
     overflow: hidden;
     align-items: center;
     width: auto;
-    /* flex-wrap: wrap; */
 }
 .droite {
     display: flex;
-    margin-bottom: 50px;
-    /* width: 60vw; */
     background: rgb(49, 94, 69);
-    /* float: right; */
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 .droite .portfolioContent, .droite p {
     width: 100%;
@@ -275,6 +365,7 @@ nav ul li:hover a {
 .portfolioContent h3 {
     font-size: calc(1em + 1vw);
     color: white;
+    text-shadow: 2px 2px 2px #171717;
     margin: 0px 30px 
 }
 .portfolioContent p {
@@ -289,6 +380,7 @@ nav ul li:hover a {
 /* CONTACT */
 .contact {
     border-top: 2px solid rgb(49, 94, 69);
+    padding: 50px 0;
 }
 .contactContent {
     display: flex;
